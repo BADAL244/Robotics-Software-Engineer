@@ -53,15 +53,15 @@ void process_image_callback(const sensor_msgs::Image img)
  
   float lin_x = 0.0, ang_z = 0.0;
 
-  if(left_img) 
+  if(left_img == true) 
   { 
     ang_z = 0.5;
   }
-  else if(right_img) 
+  else if(right_img == true) 
   { 
     ang_z = -0.5;
   }
-  else if(center_img) 
+  else if(center_img == true) 
   { 
     lin_x = 0.5;
   }
