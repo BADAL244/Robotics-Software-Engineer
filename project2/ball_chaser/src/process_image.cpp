@@ -36,10 +36,7 @@ void process_image_callback(const sensor_msgs::Image img)
     // Request a stop when there's no white ball seen by the camera
 
      int white_pixel_height = -1, white_pixel_step = -1; 
-     bool left_img = white_pixel_step <= img.step * 0.3 && white_pixel_step >= 0;
-     bool right_img = white_pixel_step > img.step *0.7  && white_pixel_step <= img.step;
-     bool center_img = white_pixel_step != -1;
-
+    
      for (int i = 0; i < img.height * img.step; i++)
      {
     	if(img.data[i] == 255) 
@@ -53,15 +50,15 @@ void process_image_callback(const sensor_msgs::Image img)
  
   float lin_x = 0.0, ang_z = 0.0;
 
-  if(left_img == true) 
+  if(white_pixel_step <= img.step * 0.3 && white_pixel_step >= 0) 
   { 
     ang_z = 0.5;
   }
-  else if(right_img == true) 
+  else if(white_pixel_step > img.step *0.7  && white_pixel_step <= img.step) 
   { 
     ang_z = -0.5;
   }
-  else if(center_img == true) 
+  else if(white_pixel_step != -1) 
   { 
     lin_x = 0.5;
   }
@@ -97,3 +94,4 @@ int main(int argc, char** argv)
 
     return 0;
 }
+
