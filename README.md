@@ -1,9 +1,9 @@
 # Robotics-Software-Engineer
 
-<b>Project 1</b> - Build My World</br>
+<b>Project 1 - Build My World</b></br>
 	Built a world in Gazebo and learn to make plugins to use your script to print to terminal "Welcome to Daniel's World!".</br>
 
-<b>Project 2</b> - Go Chase it </br>
+<b>Project 2 - Go Chase it</b></br>
 In this project the robot chases the white ball when it is in view. 
 
 Launching myworld from Gazebo
