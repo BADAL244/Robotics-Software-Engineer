@@ -15,7 +15,7 @@ Launching Gazebo ros
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
-Running ball chaser robot - in an another terminal  
+Running ball chaser robot in an another terminal  
 ```
 $ cd catkin_ws
 $ source devel/setup.bash
