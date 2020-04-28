@@ -297,7 +297,7 @@ int main()
         p[j] = p3[j];
         //cout << p[j].show_pose() << endl;
     }
-	// TODO: Evaluate the error by priting it in this form:
+	// TODO: Evaluate the error by printing it in this form:
     cout << "Step = " << t << ", Evaluation = " << evaluation(myrobot,p,n) << endl;
     return 0;
 }
