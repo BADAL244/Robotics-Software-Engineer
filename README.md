@@ -21,3 +21,24 @@ $ cd catkin_ws
 $ source devel/setup.bash
 $ roslaunch ball_chaser ball_chaser.launch
 ```
+<b>Project 3 - Where Am I</b></br>
+In this project it focuses on Adaptive Monte Carlo Localization (AMCL) for localizing the robot in the pgm map.  Using particle cloud you can see where the robot is inside the map.
+
+To run it use the following commands in the terminal</br>
+```
+$ cd to/your/package/here/
+$ source devel/setup.bash
+$ roslaunch my_robot world.launch
+```
+In the second terminal</br>
+```
+$ cd to/your/package/here/
+$ source devel/setup.bash
+$ roslaunch my_robot amcl.launch
+```
+To control the robot inside Rviz open another terminal</br>
+```
+$ cd to/your/package/here/
+$ source devel/setup.bash
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
